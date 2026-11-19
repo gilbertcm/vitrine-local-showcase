@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Painel do lojista — Vitrine Local</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="painel">
+    <nav class="painel-menu" aria-label="Painel">
+      <a class="marca-texto" href="index.html">Vitrine Local</a>
+      <a class="ativo" href="painel.html" aria-current="page">Visão geral</a>
+      <a href="loja.html">Minha loja</a>
+      <a href="painel.html">Produtos</a>
+      <a href="painel.html">Estatísticas</a>
+      <a href="painel.html">Plano e pagamento</a>
+      <a href="index.html" style="margin-top:12px">Sair</a>
+    </nav>
+
+    <main class="painel-conteudo">
+      <div class="secao-cabecalho">
+        <div>
+          <span class="muted" style="font-size:14px">Casa Forte Materiais</span>
+          <h1 style="font-size:32px">Visão geral</h1>
+        </div>
+        <a class="btn btn-primario" href="painel.html">+ Novo produto</a>
+      </div>
+
+      <div class="metricas">
+        <div class="metrica"><span class="muted">Visitas (30 dias)</span><strong>2.410</strong><small class="positivo">+12% que o mês anterior</small></div>
+        <div class="metrica"><span class="muted">Cliques no WhatsApp</span><strong>318</strong><small>13% das visitas</small></div>
+        <div class="metrica"><span class="muted">Posição na vitrine</span><strong>#1</strong><small>de 21 lojas</small></div>
+        <div class="metrica"><span class="muted">Produtos ativos</span><strong>24</strong><small>Plano Vitrine: ilimitado</small></div>
+      </div>
+
+      <div class="painel-linha">
+        <section class="caixa grafico" aria-labelledby="graf">
+          <h2 id="graf">Visitas por semana</h2>
+          <div class="barras" role="img" aria-label="Visitas por semana: 480, 560, 610 e 760">
+            <div class="barra">480<div style="height:106px"></div></div>
+            <div class="barra">560<div style="height:125px"></div></div>
+            <div class="barra">610<div style="height:136px"></div></div>
+            <div class="barra">760<div style="height:170px"></div></div>
+          </div>
+          <div class="barras-legenda"><span>Sem 1</span><span>Sem 2</span><span>Sem 3</span><span>Sem 4</span></div>
+        </section>
+
+        <section class="plano" aria-labelledby="plano">
+          <h2 id="plano" style="font-size:20px">Plano Vitrine</h2>
+          <strong style="font:700 28px var(--fonte-titulo)">R$ [VALOR]/mês</strong>
+          <span style="font-size:14px;color:#E4F1EA">Próxima cobrança: [DATA]</span>
+          <ul>
+            <li>Produtos ilimitados</li>
+            <li>Estatísticas completas</li>
+            <li>Selo de loja verificada</li>
+          </ul>
+          <a class="btn" href="painel.html">Gerenciar plano</a>
+        </section>
+      </div>
+
+      <section class="caixa" aria-labelledby="prod">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h2 id="prod">Produtos mais vistos</h2>
+          <a href="painel.html"><strong>Ver todos</strong></a>
+        </div>
+        <div class="tabela-caixa">
+          <table>
+            <thead>
+              <tr><th>Produto</th><th>Preço</th><th>Visualizações</th><th>Status</th><th><span class="sr-only">Ações</span></th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Cimento CP-II 50 kg</strong></td><td>R$ 38,90</td><td>412</td><td><span class="status">Disponível</span></td><td style="text-align:right"><a href="painel.html">Editar</a></td></tr>
+              <tr><td><strong>Tinta acrílica fosca 18 L</strong></td><td>R$ 289,00</td><td>356</td><td><span class="status">Disponível</span></td><td style="text-align:right"><a href="painel.html">Editar</a></td></tr>
+              <tr><td><strong>Argamassa AC-I 20 kg</strong></td><td>R$ 17,50</td><td>241</td><td><span class="status">Disponível</span></td><td style="text-align:right"><a href="painel.html">Editar</a></td></tr>
+              <tr><td><strong>Fio flexível 2,5 mm — 100 m</strong></td><td>R$ 219,00</td><td>198</td><td><span class="status esgotado">Esgotado</span></td><td style="text-align:right"><a href="painel.html">Editar</a></td></tr>
+              <tr><td><strong>Torneira de parede metal</strong></td><td>R$ 42,00</td><td>150</td><td><span class="status">Disponível</span></td><td style="text-align:right"><a href="painel.html">Editar</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Criar conta — Vitrine Local</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="cadastro-pagina">
+    <div class="cadastro">
+
+      <aside class="cadastro-lado">
+        <a href="index.html">Vitrine Local</a>
+        <div id="lado-cliente" style="display:flex;flex-direction:column;gap:14px">
+          <h2>Compre de quem está perto de você.</h2>
+          <ul>
+            <li>Salve suas lojas favoritas</li>
+            <li>Avalie lojas e ajude outros clientes</li>
+            <li>Receba novidades e promoções do seu bairro</li>
+          </ul>
+        </div>
+        <div id="lado-lojista" hidden style="display:flex;flex-direction:column;gap:14px">
+          <h2>Coloque sua loja na vitrine da cidade.</h2>
+          <ul>
+            <li>Página própria com produtos, preços e horários</li>
+            <li>Clientes chamam você direto no WhatsApp</li>
+            <li>Veja quantas pessoas visitaram sua loja</li>
+            <li>Lojas mais visitadas ganham destaque na página inicial</li>
+          </ul>
+          <p style="font-size:14px;color:var(--verde-claro)">Sua loja aparece depois de aprovada pela equipe (até 48 h).</p>
+        </div>
+      </aside>
+
+      <section class="cadastro-form">
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <h1>Criar conta</h1>
+          <p class="muted">Já tem conta? <a href="painel.html"><strong>Entrar</strong></a></p>
+        </div>
+
+        <div class="alternador" id="alternador" role="group" aria-label="Tipo de conta">
+          <button type="button" data-tipo="cliente" aria-pressed="true">Sou cliente</button>
+          <button type="button" data-tipo="lojista" aria-pressed="false">Sou lojista</button>
+        </div>
+
+        <form class="form-grade" onsubmit="return false">
+          <div class="campo"><label for="nome">Seu nome</label><input id="nome" type="text" autocomplete="name"></div>
+          <div class="campo"><label for="email">E-mail</label><input id="email" type="email" autocomplete="email"></div>
+          <div class="campo"><label for="whats">WhatsApp</label><input id="whats" type="tel" placeholder="(73) 9 0000-0000"></div>
+          <div class="campo"><label for="senha">Senha</label><input id="senha" type="password" autocomplete="new-password"></div>
+
+          <div class="linha-inteira dados-loja" id="dados-loja" hidden>
+            <strong>Dados da loja</strong>
+            <div class="form-grade">
+              <div class="campo"><label for="loja">Nome da loja</label><input id="loja" type="text"></div>
+              <div class="campo">
+                <label for="cat">Categoria</label>
+                <select id="cat">
+                  <option>Escolha…</option>
+                  <option>Construção</option><option>Roupas</option><option>Calçados</option>
+                  <option>Eletrodomésticos</option><option>Eletrônicos</option><option>Alimentos</option>
+                  <option>Móveis</option><option>Pet</option><option>Ótica e saúde</option>
+                </select>
+              </div>
+              <div class="campo"><label for="bairro-loja">Bairro</label><input id="bairro-loja" type="text"></div>
+              <div class="campo"><label for="cnpj">CNPJ ou MEI <span style="font-weight:400" class="muted">(opcional)</span></label><input id="cnpj" type="text"></div>
+            </div>
+          </div>
+
+          <div class="linha-inteira aceite">
+            <input id="termos" type="checkbox">
+            <label for="termos">Li e aceito os <a href="escopo.html#regras">Termos de uso</a> e a <a href="escopo.html#regras">Política de privacidade</a>.</label>
+          </div>
+
+          <div class="linha-inteira">
+            <button class="btn btn-primario btn-grande" style="width:100%" type="submit" id="botao-enviar">Criar minha conta</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
